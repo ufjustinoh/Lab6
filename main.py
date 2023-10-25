@@ -9,6 +9,19 @@ def menu_display():
     print("3. Quit")
 
 
+def encode(password):
+    encoded_string = ""
+    for digit in password:
+        if digit == "7":
+            encoded_string += "0"
+        elif digit == "8":
+            encoded_string += "1"
+        elif digit == "9":
+            encoded_string += "2"
+        encoded_string += str(int(digit) + 3)
+    return encoded_string
+
+
 # Have user input their password to be decoded in a loop
 def main():
     while True:
